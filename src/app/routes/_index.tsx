@@ -75,14 +75,14 @@ function PostItem({post}: {post: WhtwndBlogEntryView}) {
     <li>
       <div className="flex">
         <p>
-          {new Date(post.createdAt).toLocaleDateString('en-US', {
+          {new Date(post.createdAt).toLocaleDateString('en-GB', {
             year: '2-digit',
             month: '2-digit',
             day: '2-digit',
           })}
           &nbsp;&nbsp;&mdash;&nbsp;&nbsp;
         </p>
-        <a className="font-bold hover:underline" href={`/posts/${post.rkey}`}>
+        <a className="font-bold hover:underline" href={`/blog/${post.rkey}`}>
           <h3 className="text-xl"> {post.title}</h3>
         </a>
       </div>

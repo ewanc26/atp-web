@@ -37,6 +37,12 @@ export function Layout({children}: {children: React.ReactNode}) {
             <NavLink href="/" selected={false}>
               Home
             </NavLink>
+            <NavLink href="/about" selected={false}>
+              About
+            </NavLink>
+            <NavLink href="/verification" selected={false}>
+              Verification
+            </NavLink>
             <NavLink
               href="https://bsky.app/profile/ewancroft.uk"
               selected={false}>
