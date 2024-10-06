@@ -52,7 +52,7 @@ export default function Index() {
           )}
           <h1 className="text-5xl md:text-6xl font-bold">Hey, I'm Ewan! 👋</h1>
         </div>
-        <p className="text-2xl text-300">blogging, poetry, reviews</p>
+        <p className="text-2xl text-300">British Gen-Z poet and programmer</p>
       </div>
       <div className="flex flex-col gap-4">
         <h2 className="text-3xl font-bold">blog posts</h2>
