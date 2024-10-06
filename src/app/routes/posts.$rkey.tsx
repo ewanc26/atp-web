@@ -16,7 +16,7 @@ export const loader = async ({params}: LoaderFunctionArgs) => {
 
 export const meta: MetaFunction<typeof loader> = ({data}) => {
   return [
-    {title: `${data?.post.title} | Hailey's Cool Site`},
+    {title: `${data?.post.title} | Ewan's Corner`},
     {
       name: 'description',
       content: `${data?.post.content?.split(' ').slice(0, 100).join(' ')}...`,

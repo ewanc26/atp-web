@@ -22,11 +22,11 @@ export const loader = async () => {
 
 export const meta: MetaFunction = () => {
   return [
-    {title: "Hailey's Cool Site"},
+    {title: "Ewan's Corner"},
     {
       name: 'description',
       content:
-        'react native, bluesky, nonsense, and maybe something serious (probably not)',
+        'blogging, poetry, reviews and maybe something serious (probably not)',
     },
   ]
 }
@@ -45,14 +45,14 @@ export default function Index() {
             <img
               className="rounded-full w-32 h-32"
               src={profile.avatar}
-              alt="Hailey's avatar"
+              alt="Ewan's avatar"
             />
           ) : (
             <div className="w-32 h-32 bg-gray-300 rounded-full"></div>
           )}
-          <h1 className="text-5xl md:text-6xl font-bold">It's Hailey! 👋</h1>
+          <h1 className="text-5xl md:text-6xl font-bold">Hey, I'm Ewan! 👋</h1>
         </div>
-        <p className="text-2xl text-300">react native, bluesky, nonsense</p>
+        <p className="text-2xl text-300">blogging, poetry, reviews</p>
       </div>
       <div className="flex flex-col gap-4">
         <h2 className="text-3xl font-bold">blog posts</h2>

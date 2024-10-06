@@ -38,11 +38,11 @@ export function Layout({children}: {children: React.ReactNode}) {
               Home
             </NavLink>
             <NavLink
-              href="https://bsky.app/profile/haileyok.com"
+              href="https://bsky.app/profile/ewancroft.uk"
               selected={false}>
               Bluesky
             </NavLink>
-            <NavLink href="https://github.com/haileyok" selected={false}>
+            <NavLink href="https://github.com/ewanc26" selected={false}>
               GitHub
             </NavLink>
           </header>

@@ -20,17 +20,17 @@ export default {
     },
     colors: {
       0: '#fff',
-      50: '#f3f6fb',
-      100: '#e3ebf6',
-      200: '#cedeef',
-      300: '#acc7e4',
-      400: '#84abd6',
-      500: '#668ecb',
-      600: '#5376bd',
-      700: '#4865ad',
-      800: '#445997',
-      900: '#374771',
-      950: '#252e46',
+      50: '#f3fbf6',  // light green
+      100: '#e3f6eb', // very light green
+      200: '#ceeddf', // light green-blue
+      300: '#acd7c7', // soft green
+      400: '#84c6ab', // minty green
+      500: '#66b48e', // balanced green
+      600: '#53987b', // deeper green
+      700: '#487f68', // dark green
+      800: '#446f59', // forest green
+      900: '#375947', // dark olive
+      950: '#253e30', // very dark green
       gray: '#252525',
     },
     extend: {},
