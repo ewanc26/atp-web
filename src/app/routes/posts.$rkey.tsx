@@ -54,7 +54,7 @@ export default function Posts() {
       <div className="flex flex-col text-center gap-4">
         <h1 className="text-5xl md:text-6xl font-bold">{post.title}</h1>
         <span className="text-md italic text-300">
-          Poorly written by {profile.displayName} on{' '}
+          Written by {profile.displayName} on{' '}
           {new Date(post.createdAt).toLocaleDateString(undefined, {
             year: 'numeric',
             month: 'long',
@@ -77,7 +77,7 @@ function Error() {
   return (
     <div className="container mx-auto pt-10 md:pt-20 pb-20">
       <h1 className="text-5xl md:text-6xl font-bold text-center">
-        Uh...something went wrong.
+        Uh... something went wrong.
       </h1>
       <div className="p-10">
         <img

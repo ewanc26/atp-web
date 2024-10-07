@@ -96,7 +96,7 @@ export function ErrorBoundary() {
   return (
     <div className="container mZx-auto pt-10 md:pt-20 pb-20">
       <h1 className="text-5xl md:text-6xl font-bold text-center">
-        Uh...something went wrong.
+        Uh... something went wrong.
       </h1>
       <div className="p-10">
         <img
