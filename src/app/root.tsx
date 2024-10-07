@@ -44,7 +44,7 @@ export function Layout({children}: {children: React.ReactNode}) {
               Verification
             </NavLink>
             <NavLink
-              href="https://bsky.app/profile/ewancroft.uk"
+              href="https://bsky.app/profile/did:plc:ofrbh253gwicbkc5nktqepol"
               selected={false}>
               Bluesky
             </NavLink>

@@ -16,7 +16,7 @@ export const loader = async ({params}: LoaderFunctionArgs) => {
 
 export const meta: MetaFunction<typeof loader> = ({data}) => {
   return [
-    {title: `${data?.post.title} | Blog | Ewan's Corner`},
+    {title: `${data?.post.title} | Hailey's Cool Site`},
     {
       name: 'description',
       content: `${data?.post.content?.split(' ').slice(0, 100).join(' ')}...`,
@@ -54,7 +54,7 @@ export default function Posts() {
       <div className="flex flex-col text-center gap-4">
         <h1 className="text-5xl md:text-6xl font-bold">{post.title}</h1>
         <span className="text-md italic text-300">
-          Written by {profile.displayName} on{' '}
+          Written by {profile.displayName} on {' '}
           {new Date(post.createdAt).toLocaleDateString(undefined, {
             year: 'numeric',
             month: 'long',

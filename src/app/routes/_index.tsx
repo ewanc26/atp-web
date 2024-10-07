@@ -26,7 +26,7 @@ export const meta: MetaFunction = () => {
     {
       name: 'description',
       content:
-        'blogging, poetry, reviews and maybe something serious (probably not)',
+        'blogging and poetry, maybe something serious too (probably not)',
     },
   ]
 }
@@ -82,7 +82,7 @@ function PostItem({post}: {post: WhtwndBlogEntryView}) {
           })}
           &nbsp;&nbsp;&mdash;&nbsp;&nbsp;
         </p>
-        <a className="font-bold hover:underline" href={`/blog/${post.rkey}`}>
+        <a className="font-bold hover:underline" href={`/posts/${post.rkey}`}>
           <h3 className="text-xl"> {post.title}</h3>
         </a>
       </div>
