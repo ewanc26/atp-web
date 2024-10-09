@@ -43,17 +43,8 @@ const Verification: React.FC = () => {
 
       <h4 className="text-xl font-semibold mt-4">Bot Accounts</h4>
       <p>
-        I will <em>always</em> put my Bluesky bot accounts on a <code>*.bot.ewancroft.uk</code> subdomain with the source code on GitHub. These are:
+        I will <em>always</em> put my Bluesky bot accounts on a <code>*.bot.ewancroft.uk</code> subdomain with the source code on GitHub.
       </p>
-      <ol className="list-decimal pl-5">
-        <li>
-          <Link to="https://bsky.app/profile/wolf.bot.ewancroft.uk" className="underline">@wolf.bot.ewancroft.uk</Link> (<Link to="https://github.com/ewanc26/bluesky-awoo-bot" className="underline">source code</Link>)
-        </li>
-        <li>
-          <Link to="https://bsky.app/profile/markov.bot.ewancroft.uk" className="underline">@markov.bot.ewancroft.uk</Link> (<Link to="https://github.com/ewanc26/bluesky-markov" className="underline">source code</Link>)
-        </li>
-      </ol>
-
       <h3 className="text-2xl font-semibold mt-4">Development</h3>
       <p>
         GitHub: <Link to="https://github.com/ewanc26" className="underline">ewanc26</Link>
