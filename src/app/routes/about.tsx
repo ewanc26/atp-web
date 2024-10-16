@@ -61,7 +61,7 @@ export default function About() {
 </p>
 
 <p>
-  You can join me on <a href="https://bsky.social" className="underline">Bluesky</a> via <a href="https://go.bsky.app/EiZxzTpß" className="underline">my starter pack</a> or join me on  <a href="https://joinmastodon.org" className="underline">Mastodon</a> using  <a href="https://mastodon.social/invite/ekqbHMEc" className="underline">my invite link.</a>
+  You can join me on <a href="https://bsky.social" className="underline">Bluesky</a> via <a href="https://go.bsky.app/2yApAmz" className="underline">my starter pack</a> or join me on  <a href="https://joinmastodon.org" className="underline">Mastodon</a> using  <a href="https://mastodon.social/invite/ekqbHMEc" className="underline">my invite link.</a>
 </p>
 </div>
   );
