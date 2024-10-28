@@ -4,7 +4,7 @@ import { Link } from '@remix-run/react';
 
 export const meta: MetaFunction = () => {
   return [
-    { title: 'Verification' },
+    { title: `Verification | Ewan's Corner` },
     {
       name: 'description',
       content: 'Verify my online presence.',

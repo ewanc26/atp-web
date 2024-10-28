@@ -11,7 +11,7 @@ import { getProfile } from '../../atproto';
 
 export const meta: MetaFunction = () => {
   return [
-    { title: 'About Me' },
+    { title: `About Me | Ewan's Corner` },
     {
       name: 'description',
       content: 'About Ewan, a British programmer and hobbyist poet.',
