@@ -4,10 +4,10 @@ import { useLoaderData } from '@remix-run/react';
 import { AppBskyActorDefs } from '@atproto/api';
 import { getProfile } from '../../atproto';
 
-export const loader = async ({ params }: LoaderFunctionArgs) => {
-  const profile = await getProfile();
-  return json({ profile });
-};
+// export const loader = async ({ params }: LoaderFunctionArgs) => {
+//  const profile = await getProfile();
+//  return json({ profile });
+// };
 
 export const meta: MetaFunction = () => {
   return [

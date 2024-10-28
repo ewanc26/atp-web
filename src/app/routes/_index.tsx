@@ -6,19 +6,19 @@ import {WhtwndBlogEntryView} from '../../types'
 import {AppBskyActorDefs} from '@atproto/api'
 import Markdown from 'react-markdown'
 
-export const loader = async () => {
-  const posts = await getPosts(undefined)
-  const profile = await getProfile()
-
-  const postsFiltered = posts.filter(p => !p.content?.startsWith('NOT_LIVE'))
-
-  const postsShortened = postsFiltered.map(p => {
-    p.content = p.content?.slice(0, 300)
-    return p
-  })
-
-  return json({posts: postsShortened, profile})
-}
+//export const loader = async () => {
+//  const posts = await getPosts(undefined)
+//  const profile = await getProfile()
+//
+//  const postsFiltered = posts.filter(p => !p.content?.startsWith('NOT_LIVE'))
+//
+//  const postsShortened = postsFiltered.map(p => {
+//    p.content = p.content?.slice(0, 300)
+//    return p
+//  })
+//
+//  return json({posts: postsShortened, profile})
+// }
 
 export const meta: MetaFunction = () => {
   return [
