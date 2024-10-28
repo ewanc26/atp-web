@@ -1,22 +1,30 @@
 import React from 'react'
-import {useLoaderData} from '@remix-run/react'
-import Markdown, {Components} from 'react-markdown'
-import {WhtwndBlogEntryView} from '../../types'
-import {getPost, getProfile} from '../../atproto'
-import {json, LoaderFunctionArgs, MetaFunction} from '@remix-run/node'
-import {Link} from '../components/link'
-import {AppBskyActorDefs} from '@atproto/api'
+import { useLoaderData } from '@remix-run/react'
+import Markdown, { Components } from 'react-markdown'
+import { WhtwndBlogEntryView } from '../../types'
+import { getPost, getProfile } from '../../atproto'
+import { json, LoaderFunctionArgs, MetaFunction } from '@remix-run/node'
+import { Link } from '../components/link'
+import { AppBskyActorDefs } from '@atproto/api'
 
-export const loader = async ({params}: LoaderFunctionArgs) => {
-  const {rkey} = params
+// Edge Function Loader
+export const loader = async ({ params }: LoaderFunctionArgs) => {
+  const { rkey } = params
   const post = await getPost(rkey!)
   const profile = await getProfile()
-  return json({post, profile})
+  
+  // Use the Response constructor to return a Response object
+  return new Response(
+    JSON.stringify({ post, profile }),
+    {
+      headers: { 'Content-Type': 'application/json' },
+    }
+  )
 }
 
-export const meta: MetaFunction<typeof loader> = ({data}) => {
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
   return [
-    {title: `${data?.post.title} | Ewan's Corner`},
+    { title: `${data?.post.title} | Ewan's Corner` },
     {
       name: 'description',
       content: `${data?.post.content?.split(' ').slice(0, 100).join(' ')}...`,
@@ -39,12 +47,13 @@ export const meta: MetaFunction<typeof loader> = ({data}) => {
       : []),
   ]
 }
+
 export default function Posts() {
-  const {post, profile} = useLoaderData<{
+  const { post, profile } = useLoaderData<{
     post: WhtwndBlogEntryView
     profile: AppBskyActorDefs.ProfileViewDetailed
   }>()
-
+  
   if (!post) {
     return <Error />
   }
@@ -91,61 +100,61 @@ function Error() {
 }
 
 const markdownComponents: Partial<Components> = {
-  h1: ({children}) => (
+  h1: ({ children }) => (
     <>
       <h1 className="text-3xl md:text-4xl font-bold">{children}</h1>
       <div className="w-full h-0.5 bg-300 my-2"></div>
     </>
   ),
-  h2: ({children}) => (
+  h2: ({ children }) => (
     <>
       <h2 className="text-2xl md:text-3xl font-bold pt-6">{children}</h2>
       <div className="w-full h-0.5 bg-300 my-2"></div>
     </>
   ),
-  h3: ({children}) => (
+  h3: ({ children }) => (
     <h3 className="text-xl md:text-2xl font-bold pt-4">{children}</h3>
   ),
-  h4: ({children}) => (
+  h4: ({ children }) => (
     <h4 className="text-lg md:text-xl font-bold pt-4">{children}</h4>
   ),
-  h5: ({children}) => (
+  h5: ({ children }) => (
     <h5 className="text-base md:text-lg font-bold pt-4">{children}</h5>
   ),
-  p: ({children}) => <p className="py-2 text-xl text-white">{children}</p>,
-  a: ({children, href}) => <Link href={href as string}>{children}</Link>,
-  ul: ({children}) => <ul className="list-disc pl-4">{children}</ul>,
-  ol: ({children}) => <ol className="list-decimal pl-4">{children}</ol>,
-  li: ({children}) => <li className="py-1">{children}</li>,
-  blockquote: ({children}) => (
+  p: ({ children }) => <p className="py-2 text-xl text-white">{children}</p>,
+  a: ({ children, href }) => <Link href={href as string}>{children}</Link>,
+  ul: ({ children }) => <ul className="list-disc pl-4">{children}</ul>,
+  ol: ({ children }) => <ol className="list-decimal pl-4">{children}</ol>,
+  li: ({ children }) => <li className="py-1">{children}</li>,
+  blockquote: ({ children }) => (
     <blockquote className="border-l-4 border-300 my-3 pl-4 py-1">
       {children}
     </blockquote>
   ),
-  code: ({children}) => (
+  code: ({ children }) => (
     <code className="bg-gray p-1 rounded-md">{children}</code>
   ),
-  pre: ({children}) => (
+  pre: ({ children }) => (
     <pre className="bg-gray p-2 rounded-md overflow-x-auto my-4">
       {children}
     </pre>
   ),
-  img: ({src, alt}) => (
+  img: ({ src, alt }) => (
     <div className="flex justify-center p-6">
       <img src={src as string} alt={alt as string} className="rounded-md" />
     </div>
   ),
   hr: () => <hr className="my-4" />,
-  table: ({children}) => (
+  table: ({ children }) => (
     <table className="table-auto w-full">{children}</table>
   ),
-  thead: ({children}) => <thead className="bg-100">{children}</thead>,
-  tbody: ({children}) => <tbody>{children}</tbody>,
-  tr: ({children}) => <tr>{children}</tr>,
-  th: ({children}) => <th className="border border-300 p-2">{children}</th>,
-  td: ({children}) => <td className="border border-300 p-2">{children}</td>,
-  strong: ({children}) => <strong className="font-bold">{children}</strong>,
-  em: ({children}) => <em className="italic">{children}</em>,
-  del: ({children}) => <del>{children}</del>,
+  thead: ({ children }) => <thead className="bg-100">{children}</thead>,
+  tbody: ({ children }) => <tbody>{children}</tbody>,
+  tr: ({ children }) => <tr>{children}</tr>,
+  th: ({ children }) => <th className="border border-300 p-2">{children}</th>,
+  td: ({ children }) => <td className="border border-300 p-2">{children}</td>,
+  strong: ({ children }) => <strong className="font-bold">{children}</strong>,
+  em: ({ children }) => <em className="italic">{children}</em>,
+  del: ({ children }) => <del>{children}</del>,
   br: () => <br />,
 }
