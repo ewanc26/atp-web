@@ -43,7 +43,7 @@ export default function Index() {
         <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-20 pb-4 md:pb-8">
           {profile ? (
             <img
-              className="rounded-full w-32 h-32"
+              className="w-32 h-32 rounded-[25%]"
               src={profile.avatar}
               alt="Ewan's avatar"
             />
@@ -52,7 +52,7 @@ export default function Index() {
           )}
           <h1 className="text-5xl md:text-6xl font-bold">Hey, I'm Ewan! 👋</h1>
         </div>
-        <p className="text-2xl text-300">British Gen-Z poet and programmer</p>
+        <p className="text-2xl text-300">British Gen-Z poet and programmer.</p>
       </div>
       <div className="flex flex-col gap-4">
         <h2 className="text-3xl font-bold">blog posts</h2>

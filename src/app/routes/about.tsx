@@ -29,7 +29,7 @@ export default function About() {
   <h1 className="text-5xl font-bold">About Me</h1>
 
   <img
-    className="rounded-lg mb-4"
+    className="w-50 h-50 rounded-[25%]"
     src={profile.avatar} // Ensure profile is fetched correctly
     alt="Ewan's avatar"
   />
