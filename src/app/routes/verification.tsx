@@ -55,6 +55,9 @@ const Verification: React.FC = () => {
             @greenwerewolf745
           </Link>
         </li>
+        <li>
+          Tumblr: <Link to="https://tumblr.com/greenwerewolf745" className="underline">@greenwerewolf745</Link>
+        </li>
       </ul>
 
       <h3 className="text-2xl font-semibold mt-4">Bluesky Accounts</h3>
