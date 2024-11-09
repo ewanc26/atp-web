@@ -36,14 +36,6 @@ const Verification: React.FC = () => {
           </Link>
         </li>
         <li>
-          Bluesky alt:{' '}
-          <Link
-            to="https://bsky.app/profile/alt.ewancroft.uk"
-            className="underline">
-            @alt.ewancroft.uk
-          </Link>
-        </li>
-        <li>
           Mastodon:{' '}
           <Link to="https://mastodon.social/@ewanc26" className="underline">
             @ewanc26@mastodon.social
