@@ -95,15 +95,6 @@ const Verification: React.FC = () => {
           <Link to="https://github.com/ewanc26" className="underline">
             ewanc26
           </Link>
-        </li>
-        <li>
-          Bluesky developmental account:{' '}
-          <Link
-            to="https://bsky.app/profile/dev.ewancroft.uk"
-            className="underline">
-            @dev.ewancroft.uk
-          </Link>
-        </li>
       </ul>
 
       <h2 className="text-3xl font-semibold mt-6">Domains</h2>
